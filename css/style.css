@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Poppins:wght@600&display=swap");
+
+:root {
+  --primary-color: hsl(322, 100%, 66%);
+  --neutral-light: hsl(193, 100%, 96%);
+  --neutral-dark: hsl(192, 100%, 9%);
+  --neutral-gray: hsl(208, 11%, 55%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+
+body {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3.5em 1em;
+}
+
+.btn {
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 1em 3.5em;
+  border: 0;
+  border-radius: 1.6em;
+  box-shadow: 0px 0px 15px 5px rgba(128, 141, 153, 0.2);
+  cursor: pointer;
+}
+
+.top-btn{
+    color: var(--neutral-dark);
+    background: #fff;
+    transition: color 0.4s ease;
+
+}
+
+.top-btn:hover{
+    color: var(--neutral-gray);
+}
+
+/* Header Section */
+header {
+  background: url("../images/bg-hero-desktop.svg") no-repeat center center/cover;
+  background-color: var(--neutral-light);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img{
+    width: 12em;
+}
+
+@media (max-width: 554px) {
+    body {
+        font-size: 14px;
+    }
+    .container{
+        padding: 2em 1em;
+    }
+}
+
+@media (max-width: 370px) {
+    header nav{
+        flex-direction: column;
+        height: 100px;
+    }
+    header img, header button{
+        width: 100%;
+    }
+}
