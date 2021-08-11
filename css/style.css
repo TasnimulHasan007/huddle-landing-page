@@ -82,14 +82,8 @@ header img{
     .container{
         padding: 2em 1em;
     }
+    header img{
+        width: 10em;
+    }
 }
 
-@media (max-width: 370px) {
-    header nav{
-        flex-direction: column;
-        height: 100px;
-    }
-    header img, header button{
-        width: 100%;
-    }
-}
