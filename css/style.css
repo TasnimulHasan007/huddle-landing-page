@@ -75,6 +75,10 @@ header img{
     width: 12em;
 }
 
+header button{
+    animation-delay: 0.2s;
+}
+
 @media (max-width: 554px) {
     body {
         font-size: 14px;
