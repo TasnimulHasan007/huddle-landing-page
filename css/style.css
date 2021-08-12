@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Poppins:wght@600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Poppins:wght@600&display=swap"); */
 
 :root {
   --primary-color: hsl(322, 100%, 66%);
+  --primary-color-light: hsl(322, 100%, 75%);
   --neutral-light: hsl(193, 100%, 96%);
   --neutral-dark: hsl(192, 100%, 9%);
   --neutral-gray: hsl(208, 11%, 55%);
@@ -44,19 +45,32 @@ h6 {
   padding: 1em 3.5em;
   border: 0;
   border-radius: 1.6em;
-  box-shadow: 0px 0px 15px 5px rgba(128, 141, 153, 0.2);
+  box-shadow: 0px 5px 15px rgba(128, 141, 153, 0.2);
   cursor: pointer;
 }
 
-.top-btn{
-    color: var(--neutral-dark);
-    background: #fff;
-    transition: color 0.4s ease;
-
+.top-btn {
+  color: var(--neutral-dark);
+  background: #fff;
+  transition: color 0.4s ease;
 }
 
-.top-btn:hover{
-    color: var(--neutral-gray);
+.top-btn:hover {
+  color: var(--neutral-gray);
+}
+
+.pink-btn {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1.2em 4em;
+  border-radius: 2.5em;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  animation-delay: 0.3s;
+}
+
+.pink-btn:hover {
+  background: var(--primary-color-light);
+  box-shadow: 0px 5px 15px hsla(322, 100%, 66%, 0.2);
 }
 
 /* Header Section */
@@ -71,23 +85,84 @@ header nav {
   align-items: center;
 }
 
-header img{
-    width: 12em;
+header nav img {
+  width: 12em;
 }
 
-header button{
-    animation-delay: 0.2s;
+header button {
+  animation-delay: 0.2s;
+}
+
+header section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 3.5em;
+}
+
+header .texts {
+  width: 50%;
+  padding-right: 1.8em;
+}
+
+header .texts h2 {
+  font-size: 2em;
+  padding-right: 2.3em;
+  animation-delay: 0.1s;
+}
+
+header .texts p {
+  padding: 2em 0;
+  color: var(--neutral-gray);
+  font-weight: 600;
+  animation-delay: 0.2s;
+}
+
+header .img-container {
+  width: 50%;
+}
+
+header .img-container img {
+  width: 100%;
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 992px) {
+  header section{
+    flex-direction: column;
+  }
+  header section .texts, header section .img-container{
+    width: 100%;
+    padding: 0 2.5em;
+  }
+
+  header section .texts{
+    text-align: center;
+  }
+
+  header section .texts h2{
+    padding-right: 0;
+  }
+
+  header section .btn{
+    width: 80%;
+    margin-bottom: 4em;
+  }
 }
 
 @media (max-width: 554px) {
-    body {
-        font-size: 14px;
-    }
-    .container{
-        padding: 2em 1em;
-    }
-    header img{
-        width: 10em;
-    }
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 2em 1em;
+  }
+  header{
+    background: url('../images/bg-hero-mobile.svg') no-repeat center center/cover;
+    background-color: var(--neutral-light);
+  }
+  header img {
+    width: 10em;
+  }
 }
 
